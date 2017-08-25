@@ -1,17 +1,10 @@
 function Board() {
+  this._initBoard();
 }
 
-Board.prototype.start = function(){
-};
-
-Board.prototype.checkGame = function(){
-};
-
-Board.prototype.stop = function(){
-};
-
-Board.prototype.restart = function(){
-};
-
-Board.prototype.gameOver = function(){
+Board.prototype._initBoard = function(){
+  this.left = $('#board').position().left;
+  this.top = $('#board').position().top;
+  this.rigth = this.left + $('#board').width();
+  this.bottom =  this.top + $('#board').height();
 };

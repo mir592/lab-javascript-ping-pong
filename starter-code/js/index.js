@@ -1,30 +1,14 @@
 var board = new Board();
+var paddle = new Paddle('#paddle1');
+
+$(document).keydown(function() {
+
+  if (event.keyCode === 38) {
+    paddle.up();
 
 
-$('#start').on('click', function(){
-  board.start();
-  activatePaddle2();
-  var game = setInterval(updateState, intervalTime);
-  renderGame();
+    
+  } else if (event.keyCode === 40) {
+    paddle.down();
+  }
 });
-
-function updateState(){
-}
-
-$(document).on('keydown', function(e){
-});
-
-function activatePaddle2() {
-}
-
-function renderGame(){
-}
-
-function renderScore(){
-}
-
-function renderBall(){
-}
-
-function renderPaddle(){
-}
